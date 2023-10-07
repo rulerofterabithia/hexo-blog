@@ -1284,7 +1284,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffdeff;
+  background: #532636;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2433,7 +2433,7 @@ ul.breadcrumb li + li:last-child {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 80%;
+  width: $main-desktop;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
