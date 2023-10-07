@@ -5,43 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/ruler-of-terabithia/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/ruler-of-terabithia/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/ruler-of-terabithia/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/ruler-of-terabithia/images/logo.svg" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/hexo-blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/hexo-blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/hexo-blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/hexo-blog/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/ruler-of-terabithia/css/main.css">
+<link rel="stylesheet" href="/hexo-blog/css/main.css">
 
 
-<link rel="stylesheet" href="/ruler-of-terabithia/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/hexo-blog/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"gitee.com","root":"/ruler-of-terabithia/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"github.com","root":"/hexo-blog/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="MySQL数据库笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL">
-<meta property="og:url" content="https://gitee.com/ruler-of-terabithia/ruler-of-terabithia/2022/04/08/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:url" content="https://github.com/rulerofterabithia/2022/04/08/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Welcome">
 <meta property="og:description" content="MySQL数据库笔记">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291130782.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291131321.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291133116.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291145074.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291155004.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291159111.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203300956080.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301000365.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301001377.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301004386.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301028743.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301034997.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301038376.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301040190.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301050055.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016214806.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215037.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215146.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215232.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215309.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215403.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215437.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215546.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215626.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215657.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215738.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215831.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215903.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215933.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215955.png">
+<meta property="og:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016220030.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301110222.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301120304.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301133907.png">
@@ -105,13 +106,13 @@
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202204051655175.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202204051656560.png">
 <meta property="article:published_time" content="2022-04-08T07:33:41.000Z">
-<meta property="article:modified_time" content="2022-04-08T07:38:19.067Z">
+<meta property="article:modified_time" content="2022-10-16T14:00:51.268Z">
 <meta property="article:author" content="特雷比西亚的王">
 <meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291130782.png">
+<meta name="twitter:image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016214806.png">
 
-<link rel="canonical" href="https://gitee.com/ruler-of-terabithia/ruler-of-terabithia/2022/04/08/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/">
+<link rel="canonical" href="https://github.com/rulerofterabithia/2022/04/08/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/">
 
 
 <script id="page-configurations">
@@ -155,7 +156,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/ruler-of-terabithia/atom.xml" title="Welcome" type="application/atom+xml">
+<link rel="alternate" href="/hexo-blog/atom.xml" title="Welcome" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -174,7 +175,7 @@
 
   <div class="site-meta">
 
-    <a href="/ruler-of-terabithia/" class="brand" rel="start">
+    <a href="/hexo-blog/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <h1 class="site-title">Welcome</h1>
       <span class="logo-line-after"><i></i></span>
@@ -195,22 +196,22 @@
   <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/ruler-of-terabithia/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+    <a href="/hexo-blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/ruler-of-terabithia/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/hexo-blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/ruler-of-terabithia/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/hexo-blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/ruler-of-terabithia/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/hexo-blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -255,7 +256,7 @@
     <span>0%</span>
   </div>
 
-  <a href="https://github.com/rulerofterabithia" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+  <a href="https://github.com/rulerofterabithia" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
     <main class="main">
@@ -270,7 +271,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://gitee.com/ruler-of-terabithia/ruler-of-terabithia/2022/04/08/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/">
+    <link itemprop="mainEntityOfPage" href="https://github.com/rulerofterabithia/2022/04/08/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20220524192347.gif">
@@ -292,10 +293,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-04-08 15:33:41 / 修改时间：15:38:19" itemprop="dateCreated datePublished" datetime="2022-04-08T15:33:41+08:00">2022-04-08</time>
+              <time title="创建时间：2022-04-08 15:33:41" itemprop="dateCreated datePublished" datetime="2022-04-08T15:33:41+08:00">2022-04-08</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-10-16 22:00:51" itemprop="dateModified" datetime="2022-10-16T22:00:51+08:00">2022-10-16</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -313,8 +320,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/ruler-of-terabithia/2022/04/08/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/ruler-of-terabithia/2022/04/08/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
+    <a title="valine" href="/hexo-blog/2022/04/08/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/hexo-blog/2022/04/08/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AC%94%E8%AE%B0/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -4073,8 +4080,7 @@
 <li>如果<code>创建表时</code>没有显式的指定字符集和比较规则，则该表<code>默认用数据库的</code>字符集和比较规则</li>
 <li>如果<code>创建数据库时</code>没有显式的指定字符集和比较规则，则该数据库<code>默认用服务器的</code>字符集和比较规则</li>
 </ul>
-<h5 id="5-2-请求到响应过程中字符集的变化"><a href="#5-2-请求到响应过程中字符集的变化" class="headerlink" title="5.2 请求到响应过程中字符集的变化"></a><strong>5.2</strong> <strong>请求到响应过程中字符集的变化</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph TB</span><br><span class="line">A(客户端) --&gt; |&quot;使用操作系统的字符集编码请求字符串&quot;| B(从character_set_client转换为character_set_connection)</span><br><span class="line">B --&gt; C(从character_set_connection转换为具体的列使用的字符集)</span><br><span class="line">C --&gt; D(将查询结果从具体的列上使用的字符集转换为character_set_results)</span><br><span class="line">D --&gt; |&quot;使用操作系统的字符集解码响应的字符串&quot;| A</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<h5 id="5-2-请求到响应过程中字符集的变化"><a href="#5-2-请求到响应过程中字符集的变化" class="headerlink" title="5.2 请求到响应过程中字符集的变化"></a><strong>5.2</strong> <strong>请求到响应过程中字符集的变化</strong></h5><p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016214806.png"></p>
 <h3 id="第02章-MySQL的数据目录"><a href="#第02章-MySQL的数据目录" class="headerlink" title="第02章 MySQL的数据目录"></a>第02章 MySQL的数据目录</h3><h4 id="1-MySQL8的主要目录结构"><a href="#1-MySQL8的主要目录结构" class="headerlink" title="1. MySQL8的主要目录结构"></a><strong>1. MySQL8的主要目录结构</strong></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name mysql</span><br></pre></td></tr></table></figure>
 
 <h5 id="1-1-数据库文件的存放路径"><a href="#1-1-数据库文件的存放路径" class="headerlink" title="1.1 数据库文件的存放路径"></a><strong>1.1</strong> <strong>数据库文件的存放路径</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variables like &#39;datadir&#39;; # &#x2F;var&#x2F;lib&#x2F;mysql&#x2F;</span><br></pre></td></tr></table></figure>
@@ -4241,7 +4247,7 @@
 <p>方式2：运行时设置</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SET PERSIST mandatory_roles &#x3D; &#39;role1,role2@localhost,r3@%.example.com&#39;; #系统重启后仍然有效</span><br><span class="line">SET GLOBAL mandatory_roles &#x3D; &#39;role1,role2@localhost,r3@%.example.com&#39;; #系统重启后失效</span><br></pre></td></tr></table></figure>
 
-<h3 id="第04章-逻辑架构"><a href="#第04章-逻辑架构" class="headerlink" title="第04章 逻辑架构"></a>第04章 逻辑架构</h3><h4 id="1-逻辑架构剖析"><a href="#1-逻辑架构剖析" class="headerlink" title="1. 逻辑架构剖析"></a><strong>1.</strong> <strong>逻辑架构剖析</strong></h4><p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291130782.png" alt="MySQL服务器端的逻辑架构说明"></p>
+<h3 id="第04章-逻辑架构"><a href="#第04章-逻辑架构" class="headerlink" title="第04章 逻辑架构"></a>第04章 逻辑架构</h3><h4 id="1-逻辑架构剖析"><a href="#1-逻辑架构剖析" class="headerlink" title="1. 逻辑架构剖析"></a><strong>1.</strong> <strong>逻辑架构剖析</strong></h4><p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215037.png"></p>
 <h5 id="1-1-第1层：连接层"><a href="#1-1-第1层：连接层" class="headerlink" title="1.1 第1层：连接层"></a><strong>1.1</strong> <strong>第1层：连接层</strong></h5><p>系统（客户端）访问<code>MySQL</code>服务器前，做的第一件事就是建立<code>TCP</code>连接。</p>
 <p>经过三次握手建立连接成功后，<code>MySQL</code>服务器对<code>TCP</code>传输过来的账号密码做身份认证、权限获取。</p>
 <ul>
@@ -4282,7 +4288,7 @@
 </li>
 </ul>
 <h5 id="1-3-第3层：引擎层"><a href="#1-3-第3层：引擎层" class="headerlink" title="1.3 第3层：引擎层"></a><strong>1.3</strong> <strong>第3层：引擎层</strong></h5><p>插件式存储引擎层（ Storage Engines），<strong>真正的负责了MySQL中数据的存储和提取，对物理服务器级别维护的底层数据执行操作</strong>，服务层通过API与存储引擎进行通信。</p>
-<h5 id="1-4-小结"><a href="#1-4-小结" class="headerlink" title="1.4 小结"></a><strong>1.4</strong> <strong>小结</strong></h5><p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291131321.png" alt="image-20220329113126234"></p>
+<h5 id="1-4-小结"><a href="#1-4-小结" class="headerlink" title="1.4 小结"></a><strong>1.4</strong> <strong>小结</strong></h5><p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215146.png"></p>
 <p>简化为三层结构：</p>
 <ol>
 <li><p>连接层：客户端和服务器端建立连接，客户端发送 SQL 至服务器端；</p>
@@ -4292,7 +4298,7 @@
 <li><p>存储引擎层：与数据库文件打交道，负责数据的存储和读取。</p>
 </li>
 </ol>
-<h4 id="2-SQL执行流程"><a href="#2-SQL执行流程" class="headerlink" title="2. SQL执行流程"></a><strong>2. SQL执行流程</strong></h4><h5 id="2-1-MySQL-中的-SQL执行流程"><a href="#2-1-MySQL-中的-SQL执行流程" class="headerlink" title="2.1 MySQL 中的 SQL执行流程"></a><strong>2.1 MySQL</strong> <strong>中的</strong> <strong>SQL执行流程</strong></h5><p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291133116.png" alt="image-20220329113337008"></p>
+<h4 id="2-SQL执行流程"><a href="#2-SQL执行流程" class="headerlink" title="2. SQL执行流程"></a><strong>2. SQL执行流程</strong></h4><h5 id="2-1-MySQL-中的-SQL执行流程"><a href="#2-1-MySQL-中的-SQL执行流程" class="headerlink" title="2.1 MySQL 中的 SQL执行流程"></a><strong>2.1 MySQL</strong> <strong>中的</strong> <strong>SQL执行流程</strong></h5><p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215232.png"></p>
 <p><strong>MySQL的查询流程：</strong></p>
 <p><strong>1.</strong> <strong>查询缓存</strong>：Server 如果在查询缓存中发现了这条 SQL 语句，就会直接将结果返回给客户端；如果没有，就进入到解析器阶段。需要说明的是，因为查询缓存往往效率不高，所以在 MySQL8.0 之后就抛弃了这个功能。</p>
 <p>查询缓存是提前把查询结果缓存起来，这样下次不需要执行就可以直接拿到结果。需要说明的是，在MySQL 中的查询缓存，不是缓存查询计划，而是查询对应的结果。这就意味着查询匹配的<code>鲁棒性大大降低</code>，只有<code>相同的查询操作才会命中查询缓存</code>。两个查询请求在任何字符上的不同（例如：空格、注释、大小写），都会导致缓存不会命中。因此 MySQL 的 查询缓存命中率不高 。</p>
@@ -4303,12 +4309,12 @@
 <p>接着，要做“<code>语法分析</code>”。根据词法分析的结果，语法分析器（比如：Bison）会根据语法规则，判断你输入的这个 SQL 语句是否<code>满足 MySQL 语法</code>。如果SQL语句正确，则会生成一个语法树。</p>
 <p><strong>3.</strong> <strong>优化器</strong>：在优化器中会确定 SQL 语句的执行路径，比如是根据<code>全表检索</code>，还是根据<code>索引检索</code>等。在查询优化器中，可以分为<code>逻辑查询</code>优化阶段和<code>物理查询</code>优化阶段。</p>
 <p><strong>4.</strong> <strong>执行器</strong>：在执行之前需要判断该用户是否<code>具备权限</code>。如果没有，就会返回权限错误。如果具备权限，就执行 SQL查询并返回结果。在 MySQL8.0 以下的版本，如果设置了查询缓存，这时会将查询结果进行缓存。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291145074.png" alt="image-20220329114541991"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215309.png"></p>
 <p>SQL 语句在 MySQL 中的流程是： SQL语句→查询缓存→解析器→优化器→执行器 。</p>
 <h4 id="3-数据库缓冲池-buffer-pool"><a href="#3-数据库缓冲池-buffer-pool" class="headerlink" title="3. 数据库缓冲池(buffer pool)"></a><strong>3.</strong> <strong>数据库缓冲池(buffer pool)</strong></h4><p><code>InnoDB</code>存储引擎是以页为单位来管理存储空间的，我们进行的增删改查操作其实本质上都是在访问页面（包括读页面、写页面、创建新页面等操作）。而磁盘 I/O 需要消耗的时间很多，而在内存中进行操作，效率则会高很多，为了能让数据表或者索引中的数据随时被我们所用，DBMS 会申请<code>占用内存来作为数据缓冲池</code>，在真正访问页面之前，需要把在磁盘上的页缓存到内存中的<code>Buffer Pool</code>之后才可以访问。</p>
 <p>这样做的好处是可以让磁盘活动最小化，从而<code>减少与磁盘直接进行 I/O 的时间</code>。要知道，这种策略对提升 SQL 语句的查询性能来说至关重要。如果索引的数据在缓冲池里，那么访问的成本就会降低很多。</p>
 <h5 id="3-1-缓冲池-vs-查询缓存"><a href="#3-1-缓冲池-vs-查询缓存" class="headerlink" title="3.1 缓冲池 vs 查询缓存"></a><strong>3.1</strong> <strong>缓冲池</strong> <strong>vs</strong> <strong>查询缓存</strong></h5><p><strong>1.</strong> <strong>缓冲池（Buffer Pool）</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291155004.png" alt="image-20220329115517901"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215403.png"></p>
 <p>从图中，你能看到 InnoDB 缓冲池包括了数据页、索引页、插入缓冲、锁信息、自适应 Hash 和数据字典信息等。</p>
 <p><strong>缓存原则：</strong></p>
 <p>“<code>位置 * 频次</code>”这个原则，可以帮我们对 I/O 访问效率进行优化。</p>
@@ -4317,7 +4323,7 @@
 <p><strong>2.</strong> <strong>查询缓存</strong></p>
 <p>查询缓存是提前把<code>查询结果缓存</code>起来，这样下次不需要执行就可以直接拿到结果。需要说明的是，在MySQL 中的查询缓存，不是缓存查询计划，而是查询对应的结果。因为命中条件苛刻，而且只要数据表发生变化，查询缓存就会失效，因此命中率低。</p>
 <h5 id="3-2-缓冲池如何读取数据"><a href="#3-2-缓冲池如何读取数据" class="headerlink" title="3.2 缓冲池如何读取数据"></a><strong>3.2</strong> <strong>缓冲池如何读取数据</strong></h5><p>缓冲池管理器会尽量将经常使用的数据保存起来，在数据库进行页面读操作的时候，首先会判断该页面是否在缓冲池中，如果存在就直接读取，如果不存在，就会通过内存或磁盘将页面存放到缓冲池中再进行读取。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203291159111.png" alt="image-20220329115958009"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215437.png"></p>
 <h5 id="3-3-查看-设置缓冲池的大小"><a href="#3-3-查看-设置缓冲池的大小" class="headerlink" title="3.3 查看/设置缓冲池的大小"></a><strong>3.3</strong> <strong>查看/设置缓冲池的大小</strong></h5><p>查看缓冲池的大小</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variables like &#39;innodb_buffer_pool_size&#39;;</span><br></pre></td></tr></table></figure>
 
@@ -4470,7 +4476,7 @@
 <h5 id="2-2-设计索引"><a href="#2-2-设计索引" class="headerlink" title="2.2 设计索引"></a><strong>2.2</strong> <strong>设计索引</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; CREATE TABLE index_demo(</span><br><span class="line">    -&gt; c1 INT,</span><br><span class="line">    -&gt; c2 INT,</span><br><span class="line">    -&gt; c3 CHAR(1),</span><br><span class="line">    -&gt; PRIMARY KEY(c1)</span><br><span class="line">    -&gt; ) ROW_FORMAT &#x3D; Compact;</span><br></pre></td></tr></table></figure>
 
 <p>这个新建的<code>index_demo</code>表中有2个INT类型的列，1个CHAR(1)类型的列，而且我们规定了c1列为主键，这个表使用<code>Compact</code>行格式来实际存储记录的。这里我们简化了index_demo表的行格式示意图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203300956080.png" alt="image-20220330095642965"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215546.png"></p>
 <ul>
 <li><code>record_type</code>：记录头信息的一项属性，表示记录的类型，<code>0</code>表示普通记录、<code>1</code>表示目录项记录、<code>2</code>表示最小记录、<code>3</code>表示最大记录。</li>
 <li><code>next_record</code>：记录头信息的一项属性，表示下一条地址相对于本条记录的地址偏移量，我们用箭头来表明下一条记录是谁。</li>
@@ -4478,16 +4484,16 @@
 <li><code>其他信息</code>：除了上述3种信息以外的所有信息，包括其他隐藏列的值以及记录的额外信息。</li>
 </ul>
 <p>将记录格式示意图的其他信息项暂时去掉并把它竖起来的效果就是这样：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301000365.png" alt="image-20220330100053271"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215626.png"></p>
 <p>把一些记录放到页里的示意图就是：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301001377.png" alt="image-20220330100150297"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215657.png"></p>
 <p><strong>1.</strong> <strong>一个简单的索引设计方案</strong></p>
 <p>我们在根据某个搜索条件查找一些记录时为什么要遍历所有的数据页呢？因为各个页中的记录并没有规律，我们并不知道我们的搜索条件匹配哪些页中的记录，所以不得不依次遍历所有的数据页。所以如果我们<code>想快速的定位到需要查找的记录在哪些数据页</code>中该咋办？我们可以为快速定位记录所在的数据页而<code>建立一个目录</code>，建这个目录必须完成下边这些事：</p>
 <ul>
 <li><strong>下一个数据页中用户记录的主键值必须大于上一个页中用户记录的主键值。</strong></li>
 <li><strong>给所有的页建立一个目录项。</strong></li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301004386.png" alt="image-20220330100409306"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215738.png"></p>
 <p>以<code>页28</code>为例，它对应<code>目录项2</code>，这个目录项中包含着该页的页号<code>28</code>以及该页中用户记录的最小主键值<code>5</code>。我们只需要把几个目录项在物理存储器上连续存储（比如：数组），就可以实现根据主键值快速查找某条记录的功能了。比如：查找主键值为<code>20</code>的记录，具体查找过程分两步：</p>
 <ol>
 <li><p>先从目录项中根据<code>二分法</code>快速确定出主键值为<code>20</code>的记录在<code>目录项3</code>中（因为 12 &lt; 20 &lt; 209 ），它对应的页是<code>页9</code>。 </p>
@@ -4499,7 +4505,7 @@
 <p><strong>2. InnoDB中的索引方案</strong> </p>
 <p><strong>① 迭代1次：目录项纪录的页</strong></p>
 <p>我们把前边使用到的目录项放到数据页中的样子就是这样：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301028743.png" alt="image-20220330102834658"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215831.png"></p>
 <p>从图中可以看出来，我们新分配了一个编号为30的页来专门存储目录项记录。这里再次强调<code>目录项记录</code>和普通的<code>用户记录</code>的<strong>不同点</strong>：</p>
 <ul>
 <li><code>目录项记录</code>的<code>record_type</code>值是1，而<code>普通用户记录</code>的<code>record_type</code>值是0。</li>
@@ -4515,7 +4521,7 @@
 </li>
 </ol>
 <p><strong>② 迭代2次：多个目录项纪录的页</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301034997.png" alt="image-20220330103442914"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215903.png"></p>
 <p>从图中可以看出，我们插入了一条主键值为320的用户记录之后需要两个新的数据页：</p>
 <ul>
 <li>为存储该用户记录而新生成了<code>页31</code>。</li>
@@ -4531,10 +4537,10 @@
 </li>
 </ol>
 <p><strong>③ 迭代3次：目录项记录页的目录页</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301038376.png" alt="image-20220330103847284"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215933.png"></p>
 <p>如图，我们生成了一个存储更高级目录项的<code>页33</code>，这个页中的两条记录分别代表页30和页32，如果用户记录的主键值在<code>[1, 320)</code>之间，则到页30中查找更详细的目录项记录，如果主键值<code>不小于320</code>的话，就到页32中查找更详细的目录项记录。</p>
 <p>我们可以用下边这个图来描述它：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301040190.png" alt="image-20220330104012108"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016215955.png"></p>
 <p>这个数据结构，它的名称是<code>B+树</code>。 </p>
 <p><strong>④</strong> <strong>B+Tree</strong></p>
 <p>一个B+树的节点其实可以分成好多层，规定最下边的那层，也就是存放我们用户记录的那层为第<code>0</code>层，之后依次往上加。之前我们做了一个非常极端的假设：存放用户记录的页<code>最多存放3条记录</code>，存放目录项记录的页<code>最多存放4条记录</code>。其实真实环境中一个页存放的记录数量是非常大的，假设所有存放用户记录的叶子节点代表的数据页可以存放<code>100条用户记录</code>，所有存放目录项记录的内节点代表的数据页可以存放<code>1000条目录项记录</code>，那么：</p>
@@ -4575,7 +4581,7 @@
 <li><code>二级索引访问需要两次索引查找</code>，第一次找到主键值，第二次根据主键值找到行数据</li>
 </ul>
 <p><strong>2.</strong> <strong>二级索引（辅助索引、非聚簇索引）</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/aoshihuankong/cloudimg@master/img/202203301050055.png" alt="image-20220330105018965"></p>
+<p><img src="https://rulerofterabithia-blog.oss-cn-hangzhou.aliyuncs.com/img/20221016220030.png"></p>
 <p><strong>概念：回表</strong> 我们根据这个以c2列大小排序的B+树只能确定我们要查找记录的主键值，所以如果我们想根据c2列的值查找到完整的用户记录的话，仍然需要到<code>聚簇索引</code>中再查一遍，这个过程称为<code>回表</code>。也就是根据c2列的值查询一条完整的用户记录需要使用到<code>2</code>棵B+树！</p>
 <p><strong>3.</strong> <strong>联合索引</strong></p>
 <p>我们也可以同时以多个列的大小作为排序规则，也就是同时为多个列建立索引，比方说我们想让B+树按照<code>c2和c3列</code>的大小进行排序，这个包含两层含义：</p>
@@ -6668,12 +6674,12 @@
   <div id="qr" style="display: none;">
       
       <div style="display: inline-block;">
-        <img src="/ruler-of-terabithia/images/wechatpay.png" alt="特雷比西亚的王 微信支付">
+        <img src="/hexo-blog/images/wechatpay.png" alt="特雷比西亚的王 微信支付">
         <p>微信支付</p>
       </div>
       
       <div style="display: inline-block;">
-        <img src="/ruler-of-terabithia/images/alipay.jpg" alt="特雷比西亚的王 支付宝">
+        <img src="/hexo-blog/images/alipay.jpg" alt="特雷比西亚的王 支付宝">
         <p>支付宝</p>
       </div>
 
@@ -6702,7 +6708,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/ruler-of-terabithia/tags/MySQL/" rel="tag"># MySQL</a>
+              <a href="/hexo-blog/tags/MySQL/" rel="tag"># MySQL</a>
           </div>
 
         
@@ -6711,11 +6717,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/ruler-of-terabithia/2022/04/08/Java%E7%AC%94%E8%AE%B0/" rel="prev" title="Java核心技术">
+    <a href="/hexo-blog/2022/04/08/Java%E7%AC%94%E8%AE%B0/" rel="prev" title="Java核心技术">
       <i class="fa fa-chevron-left"></i> Java核心技术
     </a></div>
       <div class="post-nav-item">
-    <a href="/ruler-of-terabithia/2022/04/11/SpringMVC%E7%AC%94%E8%AE%B0/" rel="next" title="SpringMVC">
+    <a href="/hexo-blog/2022/04/11/SpringMVC%E7%AC%94%E8%AE%B0/" rel="next" title="SpringMVC">
       SpringMVC <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -6792,23 +6798,23 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/ruler-of-terabithia/archives/">
+          <a href="/hexo-blog/archives/">
         
           <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/ruler-of-terabithia/tags/">
+            <a href="/hexo-blog/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/rulerofterabithia" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;rulerofterabithia" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/rulerofterabithia" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;rulerofterabithia"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:caiyongkangofficial@gmail.com" title="E-Mail → mailto:caiyongkangofficial@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
@@ -6849,7 +6855,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -6858,12 +6864,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">451k</span>
+    <span title="站点总字数">452k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">6:50</span>
+    <span title="站点阅读时长">6:51</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -6902,31 +6908,31 @@
   </div>
 
   
-  <script size="300" alpha="0.6" zIndex="-1" src="/ruler-of-terabithia/lib/canvas-ribbon/canvas-ribbon.js"></script>
-  <script src="/ruler-of-terabithia/lib/anime.min.js"></script>
-  <script src="/ruler-of-terabithia/lib/velocity/velocity.min.js"></script>
-  <script src="/ruler-of-terabithia/lib/velocity/velocity.ui.min.js"></script>
+  <script size="300" alpha="0.6" zIndex="-1" src="/hexo-blog/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/hexo-blog/lib/anime.min.js"></script>
+  <script src="/hexo-blog/lib/velocity/velocity.min.js"></script>
+  <script src="/hexo-blog/lib/velocity/velocity.ui.min.js"></script>
 
-<script src="/ruler-of-terabithia/js/utils.js"></script>
+<script src="/hexo-blog/js/utils.js"></script>
 
-<script src="/ruler-of-terabithia/js/motion.js"></script>
-
-
-<script src="/ruler-of-terabithia/js/schemes/pisces.js"></script>
+<script src="/hexo-blog/js/motion.js"></script>
 
 
-<script src="/ruler-of-terabithia/js/next-boot.js"></script>
+<script src="/hexo-blog/js/schemes/pisces.js"></script>
 
 
-
-
-  
+<script src="/hexo-blog/js/next-boot.js"></script>
 
 
 
 
   
-<script src="/ruler-of-terabithia/js/local-search.js"></script>
+
+
+
+
+  
+<script src="/hexo-blog/js/local-search.js"></script>
 
 
 
